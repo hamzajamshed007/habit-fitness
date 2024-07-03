@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,6 +14,25 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+
+Auth::routes();
+
+Route::namespace('Auth')->group( function(){
+    Route::controller('ForgotPasswordController')->group( function(){
+        Route::get('password/reset', 'showLinkRequestForm')->name('password.request');
+        Route::post('password/email', 'sendResetLinkEmail')->name('password.email');
+    });
+
+    Route::controller('ResetPasswordController')->group( function(){
+        Route::get('password/reset/{token}', 'showResetForm')->name('password.reset');
+        Route::post('password/reset','reset')->name('password.update');
+    });
 });
+
+Route::controller('HomeController')->group( function(){
+    Route::get('/', 'index')->name('home');
+});
+

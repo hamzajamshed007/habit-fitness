@@ -1,0 +1,35 @@
+
+/*# sourceMappingURL=data:application/json;charset=utf8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiY3VzdG9tLmNzcyIsInNvdXJjZXMiOlsiY3VzdG9tLnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiJ9 */
+
+/*# sourceMappingURL=custom.css.map */
+.image-control img{
+    width: 200px;
+    margin: 15px 0px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+.image-control video{
+    width: 200px;
+    height: 200px;
+    margin: 7px;
+    border-radius: 5px;
+    vertical-align: middle;
+    background: white;
+}
+
+.header-logo{
+    height: 150px !important;
+    background-color: black !important;
+    margin-top: 20px;
+}
+
+.sidebar-mini .header-logo{
+    height: 40px !important;
+}
+
+.trainer-image img{
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+}

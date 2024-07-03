@@ -1,0 +1,354 @@
+@media only screen and (max-width:1920){}
+@media only screen and (max-width:1600px){
+    .get_started_leftSect img {
+        height: 550px;
+    }
+}
+@media only screen and (max-width:1440px){}
+@media only screen and (max-width:1366px){
+    .index__left__Sect1 .traveler__fontBold {
+        font-size: 220px;
+    }
+}
+@media only screen and (max-width:1280px){
+    .aboutRight__sect:before {
+        width: 900px;
+    }
+}
+@media only screen and (max-width:1200px){
+    .index__left__Sect1 .traveler__fontBold {
+        font-size: 200px;
+    }
+    .timer {
+        font-size: 45px;
+    }
+    .time__section,
+    .calories__section {
+        width: 150px;
+    }    
+    .aboutLeft__sect .traveler__fontBold {
+        max-width: 80%;
+    }
+    .traveler__fontBold {
+        font-size: 100px;
+    }
+    .aboutRight__sect:before {
+        content: '';
+        position: absolute;
+        background: #191919;
+        width: 800px;
+        height: 530px;
+    }  
+    .aboutLeft__sect img{
+        max-width: 350px;
+    } 
+    .about_right_images {
+        margin-top: -50px;
+    } 
+    .about__items__box3 .about__images img {
+        height: 440px;
+    }
+    .get__Started_section {
+        height: 600px;
+    }   
+    .course_title {
+        font-size: 40px;
+    } 
+    .testimonial_swiper .swiper-button-next {
+        right: 43%;
+    }
+    .testimonial_swiper .swiper-button-prev {
+        left: 43%;
+    }
+    .contact_form_wrapper {
+        padding: 50px 50px;
+    }
+    .select_trainer_wrapper .course_section .row {
+        width: 100%;
+    }
+}
+@media only screen and (max-width: 1140px){
+    .feature_item_box {
+        height: 450px;
+    }
+    .feature_title {
+        font-size: 40px;
+    }
+    .BoldNum {
+        font-size: 80px;
+    }
+    .detail_sect {
+        gap: 10px;
+    }   
+    .datepicker{
+        width: 100%;
+    } 
+}
+@media only screen and (max-width: 1024px){
+    .stellarnav.mobile ul {
+        background: rgb(128 197 190);
+    }
+    .traveler__fontBold {
+        z-index: unset;
+    }
+    .contact_form {
+        padding: 40px 20px;
+    } 
+    .header__list li a.active {
+        color: #fff;
+    }
+    .header__section{
+        border: 0;
+    }
+}
+@media only screen and (max-width:991px){
+    .index__sect1{
+        height: 900px;
+    }
+    .index__left__Sect1 .traveler__fontBold {
+        font-size: 150px;
+    }
+    .traveler__fontBold {
+        font-size: 85px;
+    }
+    .aboutLeft__sect .traveler__fontBold {
+        max-width: 75%;
+    }
+    .aboutRight__sect:before {
+        width: 700px;
+    }
+    .about__items__box3 .about__images img {
+        height: 350px;
+    }
+    .about_left_images {
+        height: 550px;
+    }
+    .feature_title {
+        font-size: 30px;
+    }
+    .feature_item_box {
+        height: 370px;
+    }
+    .course_title {
+        font-size: 30px;
+    }
+    .testimonial_box .paragraph {
+        font-size: 18px;
+    }
+    .title_white {
+        font-size: 50px;
+    }
+    .payment__desc .paragraph {
+        font-size: 18px;
+    }
+    .payment__course__img img {
+        width: 280px;
+        height: 180px;
+    }
+}
+@media only screen and (max-width: 910px){
+    .course_section {
+        padding: 100px 0;
+    }
+    .trainer_detail {
+        width: 60px;
+    }
+}
+@media only screen and (max-width: 767px){
+    .index__left__Sect1 .traveler__fontBold {
+        font-size: 120px;
+    }
+    .index__right__Sect1 {
+        flex-direction: unset;
+        align-items: center;
+        gap: 10px;
+    }
+    .banner__vector{
+        position: unset;
+    }
+    .contactUs{
+        display: none;
+    }
+    .timer {
+        font-size: 40px;
+    }
+    .aboutRight__sect {
+        padding: 40px 0 0;
+    }
+    .aboutRight__sect .paragraph {
+        font-size: 20px;
+        max-width: 100%;
+    }
+    .aboutRight__sect:before {
+        display: none;
+    }
+    .about__items__box1, 
+    .about__items__box2 {
+        position: unset;
+    }
+    .about_left_images {
+        height: 500px;
+        display: flex;
+        align-items: flex-start;
+        gap: 40px;
+    }
+    .index__sect1 {
+        height: 100%;
+        padding: 150px 0 50px;
+    }
+    .about_right_images {
+        text-align: center;
+    }
+    .feature_item_box {
+        height: 400px;
+        width: 350px;
+        margin: 0 auto 20px;
+    }
+    .get__Started_section {
+        height: 450px;
+    }
+    .get_started_leftSect img {
+        height: 400px;
+    }
+    .get_started_rightSect {
+        max-width: 100%;
+    }
+    .title_white {
+        font-size: 40px;
+    }
+    .contact_detail {
+        padding: 30px;
+        height: unset;
+        margin-top: 30px;
+    }
+    .course_detail_img:before{
+        display: none;
+    }
+    .course_detail_img img {
+        max-width: 300px;
+        max-height: 450px;
+        margin-bottom: 20px;
+    }
+    .subscription_box {
+        margin: 
+        0 auto 20px;
+    }
+    .schedul_time {
+        height: 100%;
+        margin-top: 20px;
+    }
+    .payment_history_detail {
+        flex-direction: column;
+    }
+    .setting__tabs_sect {
+        flex-direction: column;
+    }
+    .setting__tabs_sect .tab-content {
+        width: 100%;
+        margin-top: 30px;
+    }
+    .setting_page_wrapper .info_detail_sect {
+        padding-bottom: 150px;
+    }
+    .trainer_profile_section {
+        margin: 0 auto 20px;
+    }
+}
+@media only screen and (max-width: 575px){
+    .traveler__fontBold {
+        font-size: 60px;
+    }
+    .about_left_images {
+        height: 400px;
+    }
+    .about_left_vector,
+    .about_right_vector {
+        height: 100px;
+    }    
+    .testimonial_box {
+        width: 350px;
+        margin: 0 auto;
+    }
+    .testimonial_swiper .swiper-button-next {
+        right: 35%;
+    }
+    .testimonial_swiper .swiper-button-prev {
+        left: 35%;
+    }
+    .get_started_leftSect img {
+        height: 220px;
+    }
+    .get__Started_section {
+        height: 350px;
+    }
+    .title_white {
+        font-size: 30px;
+    }
+    .information__section {
+        padding: 50px 0 300px;
+    }    
+    .ft_section {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .banner__vector {
+        display: none;
+    }
+    .index__right__Sect1 {
+        margin-top: 30px;
+    }
+    .index__left__Sect1 .traveler__fontBold {
+        font-size: 100px;
+    }
+    .about__items__box3 .about__images img {
+        height: 260px;
+    }
+    .contact_wrapper .info_detail_sect {
+        padding-bottom: 200px;
+    }
+    .subscription_section .traveler__fontBold {
+        font-size: 60px;
+    }
+    .confirm_payment_detail {
+        padding-bottom: 350px;
+    }
+    .addCard .course_title {
+        font-size: 30px;
+    }
+    .userdetail p{
+        display: none;
+    }
+    .loginForm {
+        width: 100%;
+        max-width: 350px;
+    }
+    .time__section, 
+    .calories__section {
+        z-index: 0;
+    }
+    .Custom_modal_css .modal-content {
+        padding: 0;
+    }
+    .profile__sect1 .info_detail_sect {
+        padding-bottom: 150px;
+    }
+}
+@media only screen and (max-width: 425px){
+    .traveler__fontBold {
+        font-size: 50px;
+    }
+    .subscription_section .traveler__fontBold {
+        font-size: 50px;
+    }
+    .trainerProfile img {
+        height: 180px;
+    }
+    .trainer_desc {
+        padding: 20px 0;
+    }
+    header__section {
+        padding-bottom: 0;
+    }
+
+}
+@media only screen and (max-width: 320px){}

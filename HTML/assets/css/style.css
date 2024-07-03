@@ -1,0 +1,1616 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+/*@font-face {*/
+/*    font-family: 'rustic_shineregular', sans-serif;*/
+/*    src: url("../fonts/RusticShine.ttf") format("truetype");*/
+/*    font-style: normal;*/
+/*}*/
+/*@font-face {*/
+/*    font-family: "Traveler", sans-serif;*/
+/*    src: url("../fonts/Traveler.ttf") format("truetype");*/
+/*}*/
+@font-face {
+    font-family: "CircularStd-Bold", sans-serif;
+    src: url("../fonts/CircularStd-Bold.otf") format("otf");
+    font-style: normal;
+}
+@font-face {
+    font-family: "lancheregular", sans-serif;
+    src: url("../fonts/Lanche_Demo.ttf") format("truetype");
+    font-style: normal;
+  }
+
+/*@font-face {*/
+/*    font-family: 'Brushed Traveler';*/
+/*    src: url('fonts/BrushedTraveler.woff2') format('woff2'),*/
+/*         url('fonts/BrushedTraveler.woff') format('woff');*/
+/*    font-weight: normal;*/
+/*    font-style: normal;*/
+/*}*/
+/*h3{*/
+/*    font-family: 'Brushed Traveler', sans-serif;*/
+/*    font-weight: normal;*/
+/*    font-style: normal;}*/
+
+@font-face {
+    font-family: 'travelerbold';
+    src: url('../fonts/traveler.woff2') format('woff2'),
+         url('../fonts/traveler.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'lancheregular';
+    src: url('../fonts/lanche_otf.woff2') format('woff2'),
+         url('../fonts/lanche_otf.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'rustic_shineregular';
+    src: url('../fonts/rusticshine.woff2') format('woff2'),
+         url('../fonts/rusticshine.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span,
+ul,
+li,
+a,
+.btn-default,
+textarea {
+	margin: 0;
+	padding: 0;
+    list-style: none;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+a,
+a:hover {
+	text-decoration: none;
+}
+
+a:focus {
+	text-decoration: none;
+}
+
+body {
+	overflow-x: hidden;
+    background-color: #000000f0;
+    position: relative;
+}
+.container {
+    max-width: 1420px;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type=number] {
+  -moz-appearance: textfield;
+}
+.d_flexCenter{
+	display: flex;
+	align-items: center;
+}
+.d_flexStart{
+	display: flex;
+	align-items: flex-start;
+	gap: 20px;
+}
+.d_flexStartBetween{
+	display: flex;
+	align-items: flex-start;
+	justify-content: space-between;
+}
+.d_flexCenterGap{
+	display: flex;
+	align-items: center;
+	gap: 20px;
+}
+.d_flexSpacebetween{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.d_flexSpacebetweenGap{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 10px;
+}
+/*scroll bar css start*/
+::-webkit-scrollbar-track{
+	-webkit-box-shadow: inset 0 0 6px #788D9C; 
+	border-radius: 10px;
+	background-color: #788D9C; 
+}
+
+::-webkit-scrollbar{
+	width: 0px;
+    height: 0px;
+    border-radius: 12px;
+	background-color: #9cbfd2d6;
+}
+::-webkit-scrollbar-thumb{
+	border-radius: 10px;
+	-webkit-box-shadow: inset 0 0 6px #788D9C; 
+	background-color: #9cbfd2d6;
+}
+/* =============== Header Css ================= */
+.header {
+    position: absolute;
+    width: 100%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    z-index: 1;
+}
+.header__section {
+    padding: 20px 0 20px;
+    border-bottom: 1px solid;
+}
+.header__userSection {
+    width: 100%;
+    max-width: 500px;
+    justify-content: end;
+    gap: 30px;
+}
+.header__logo {
+    width: 100%;
+    max-width: 150px;
+    margin: 0 auto;
+    text-align: center;
+}
+.header__logo a img {
+    max-width: 100px;
+    object-fit: cover;
+}
+.header__menu {
+    width: 100%;
+    max-width: 650px;
+    display: flex;
+}
+/* .header__list {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+} */
+.stellarnav>ul>li {
+    margin-right: 10px;
+}
+.header__list li a {
+    font-size: 15px;
+  color: #FFFFFF;
+  font-weight: 400;
+  font-family: "lancheregular", sans-serif;
+  transition: all 0.3s ease-in-out;
+  letter-spacing: 1px;
+}
+.header__list li a.active {
+    color: #8ad5ce;
+    border-bottom: 1px solid #8ad5ce;
+}
+.stellarnav>ul>li>a {
+    padding: 0;
+}
+.stellarnav .menu-toggle span.bars span {
+    width: 25px;
+    height: 3px;
+    border-radius: 2px;
+    background: #fff;
+}
+.stellarnav .icon-close:after, 
+.stellarnav .icon-close:before {
+    border-bottom: solid 3px #fff;
+}
+.contactUs {
+    font-size: 16px;
+    color: #fff !important;
+    font-family: "lancheregular", sans-serif;
+}
+.userSection a {
+    font-size: 14px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 240px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+}
+.userdetail img {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    border: 2px solid #8ad5ce;
+}
+.userdetail {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.userSection {
+    position: relative;
+}
+.Userprofile_detail {
+    background: #191919;
+    width: 180px;
+    padding: 15px;
+    border-radius: 12px;
+    position: absolute;
+    right: 0;
+    top: 0px;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease-in-out;
+}
+.userSection:hover .Userprofile_detail{
+    top: 55px;
+    opacity: 1;
+    visibility: visible;
+}
+.Userprofile_detail .header__list li {
+    padding: 4px 0;
+}
+.Userprofile_detail .header__list li a {
+    font-family: 'Poppins', sans-serif;
+}
+/* ============= login page css ============= */
+.LoginPage {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: url('../images/login_bg.png');
+    background-size: cover;
+    background-position: center;
+}
+.loginForm {
+    width: 100%;
+    max-width: 500px;
+    text-align: center;
+}
+.login_content .cta {
+    width: 100%;
+}
+.loginHeading {
+    font-size: 50px;
+    color: #fff;
+    font-family: "lancheregular", sans-serif;
+}
+.login_links .paragraph > a {
+    font-size: 22px;
+}
+.login_links .paragraph {
+    font-size: 20px;
+    padding-bottom: 10px;
+}
+.login_links .paragraph a {
+    color: #81D4CE;
+    margin-left: 10px;
+    text-decoration: underline;
+}
+.social_links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+.apps {
+    width: 40px;
+    height: 40px;
+    background: #FFE642;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    color: #58020e;
+    transition: all 0.3s ease-in-out;
+}
+.apps:hover {
+    background: linear-gradient(to right, #00BBCC, #CC0018);
+    color: #fff;
+}
+
+/* ============ Index Section 1 Css ============= */
+.index__sect1 {
+    position: relative;
+    height: 950px;
+    display: flex;
+    align-items: center;
+}
+.index__inner_content {
+    padding: 50px 0 0;
+}
+.index__right__Sect1 {
+    position: relative;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: end;
+    gap: 50px;
+    text-align: center;
+}
+.banner__vector {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+.badge__title {
+    font-size: 14px;
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+    background: #191919;
+    padding: 5px 10px 5px 0px;
+    border-radius: 30px;
+    width: fit-content;
+}
+.badge__title span {
+    background: #81D4CE;
+    padding: 1px 5px;
+    border-radius: 50px;
+    color: #030406;
+}
+.index__left__Sect1 .traveler__fontBold {
+    font-size: 250px;
+}
+.traveler__fontBold {
+    font-size: 150px;
+    color: #F80000;
+    font-family: "travelerbold", sans-serif;
+    line-height: 1.1;
+    position: relative;
+    z-index: 1;
+}
+
+.paragraph {
+    font-size: 16px;
+    color: #7f7f7f;
+    font-family: 'Poppins', sans-serif;
+}
+.btn__Section {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+.btn__section {
+    position: relative;
+    z-index: 1;
+}
+.cta {
+    background: #81D4CE;
+    width: 200px;
+    height: 60px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    color: #030406;
+    font-weight: 600;
+    border: 1px solid #81D4CE;
+    transition: all 0.3s ease-in-out;
+    font-family: 'Poppins', sans-serif;
+}
+.cta_transparent {
+    background: #191919;
+    color: #fff;
+    border-color: #191919;
+    transition: all 0.3s ease-in-out;
+    font-family: 'Poppins', sans-serif;
+}
+.cta:hover {
+    background: transparent;
+    color: #81D4CE;
+}
+.cta_transparent:hover {
+    background: #81D4CE;
+    color: #030406;
+}
+.time__section {
+    width: 180px;
+    background: #191919;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 0px;
+    border-radius: 12px;
+}
+.calories__section {
+    width: 180px;
+    background: #191919;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 0px;
+    border-radius: 12px;
+}
+.timer {
+    font-size: 60px;
+    font-weight: 900;
+    color: #FFE642;
+    position: relative;
+    z-index: 1;
+    font-family: 'rustic_shineregular', sans-serif;
+}
+.small_txt {
+    font-size: 13px;
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+}
+.calories__section .timer {
+    color: #F80000;
+}
+/* ================ About Section Css ================= */
+.about__section {
+    position: relative;
+    height: 100%;
+    padding-bottom: 50px;
+}
+.title {
+    font-size: 40px;
+    color: #8ad5ce;
+    line-height: 3;
+    font-family: "lancheregular", sans-serif;
+}
+.aboutLeft__sect .traveler__fontBold {
+    max-width: 92%;
+}
+.aboutRight__sect {
+    position: relative;
+    padding: 100px 0 0;
+}
+.aboutRight__sect:before {
+    content: '';
+    position: absolute;
+    background: #191919;
+    width: 1000px;
+    height: 730px;
+    z-index: -1;
+    top: 0;
+    right: 0;
+}
+.aboutRight__sect .paragraph {
+    font-size: 25px;
+    padding-bottom: 30px;
+    font-weight: 400;
+    max-width: 510px;
+}
+.aboutLeft__sect img {
+    margin-top: -50px;
+}
+.about_left_images {
+    position: relative;
+    height: 700px;
+    margin-top: 50px;
+}
+.about__items__box {
+    width: 50%;
+}
+.about__images img {
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+.medium__text {
+    font-size: 20px;
+    color: #fff;
+}
+.regular__text {
+    font-size: 14px;
+    color: #fff;
+}
+.about__detail {
+    padding: 10px 0 0;
+}
+.about__items__box1 {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.about__items__box1 .about__images img {
+    border-radius: 30px 30px 0px 0px;
+}
+.about__items__box2 {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+.about__items__box2 .about__images img {
+    border-radius: 0px 0px 30px 30px;
+}
+.about__items__box3 {
+    width: 100%;
+}
+.about__items__box3 .about__images img {
+    width: auto;
+    height: 510px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 30px 30px 0px 0px;
+}
+.about_right_images {
+    margin-top: -140px;
+}
+.about_left_vector {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 300px;
+    object-fit: cover;
+    object-position: center;
+}
+.about_right_vector {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    height: 350px;
+    object-fit: cover;
+    object-position: center;
+}
+.Index_Section_bg {
+    background: url('../images/section_bg.png');
+    background-size: cover;
+    background-position: top;
+    height: 100%;
+
+}
+/* ========== Feature Workout Section Css ============= */
+.feature_workout_section {
+    position: relative;
+    padding: 100px 0 70px;
+}
+.feature_item_box {
+    display: block;
+    position: relative;
+    height: 550px;
+    border-radius: 20px;
+    overflow: hidden;
+}
+.feature_item_box img {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    object-fit: cover;
+    object-position: center;
+}
+.feature_descpt {
+    position: absolute;
+    width: 100%;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 20px;
+}
+.feature_descpt a img {
+    width: auto;
+    height: auto;
+    border-radius: 0;
+}
+.feature_title {
+    font-size: 50px;
+    color: #fff;
+    font-family: "lancheregular", sans-serif;
+}
+.BoldNum {
+    font-size: 100px;
+    color: #81D4CE;
+    font-family: "lancheregular", sans-serif;
+    line-height: 1.2;
+}
+.gym_detail_section {
+    padding: 70px 0;
+    border-top: 1px solid #ffffff3b;
+    border-bottom: 1px solid #ffffff3b;
+    background: #1919198a;
+}
+.detail_sect .regular__text {
+    color: #8ad5ce;
+}
+.detail_sect {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+/* ============= Video Course Section ============= */
+.course_section {
+    position: relative;
+    padding: 150px 0;
+}
+.more__courses {
+    font-size: 18px;
+    color: #fff !important;
+    font-weight: 400;
+    text-decoration: underline !important;
+}
+.video__Box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 12px;
+}
+.video__Box {
+    position: relative;
+    height: 270px;
+}
+.cousre__video {
+    cursor: pointer;
+    margin-bottom: 30px;
+    display: block;
+}
+.video__Box:before {
+    content: '';
+    position: absolute;
+    background: linear-gradient(360deg, #000000bd, transparent);
+    width: 100%;
+    height: 100%;
+}
+.course_title {
+    font-size: 55px;
+    color: #fff;
+    font-family: "lancheregular", sans-serif;
+}
+.course_video_desc {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: -20px;
+    position: relative;
+    padding: 0 5px;
+}
+.video_time {
+    background: #000;
+    padding: 0 10px;
+    color: #fff;
+    border-radius: 30px;
+}
+.course_left_desc .regular__text {
+    font-size: 18px;
+    font-family: 'Poppins', sans-serif;
+}
+.coursesdetail_page_wrapper  {
+    position: relative;
+    padding-top: 150px;
+}
+/* ============ Testimonial Section Css ================ */
+.our__testimonial__titleSect {
+    text-align: center;
+    padding: 30px 0;
+}
+.title_white {
+    font-size: 60px;
+    color: #fff;
+    font-family: "lancheregular", sans-serif;
+    line-height: 1.2;
+}
+.testimonial_swiper {
+    position: relative;
+    padding: 50px 0 0;
+    height: 600px;
+}
+.testimonial_swiper .testimonialSwiper {
+    height: 100%;
+    padding-top: 20px;
+}
+.testimonial_swiper .swiper-button-prev {
+    left: 46%;
+    right: auto;
+    top: 92%;
+}
+.testimonial_swiper .swiper-button-next {
+    left: auto;
+    right: 46%;
+    top: 92%;
+}
+.testimonial_swiper .swiper-button-prev:after, 
+.testimonial_swiper .swiper-button-next:after {
+    display: none;
+}
+.custom_prevNext {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: #fff;
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+}
+.testimonial_swiper .testimonialSwiper .swiper-slide-active {
+    transition: all 0.3s ease-in-out;
+}
+.testimonial_swiper .testimonialSwiper .swiper-slide-active .testimonial_box {
+    transform: scale(1.05);
+    transition: all 0.3s ease-in-out;
+    border-color: #ef0016;
+}
+.testimonial_box {
+    border: 1px solid #94A3B8;
+    padding: 30px 20px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 30px;
+    transition: all 0.3s ease-in-out;
+}
+.testimonial_box .paragraph {
+    font-size: 20px;
+}
+.testimonial__user {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.user__img img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+}
+.user__name {
+    font-size: 18px;
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+}
+.user_desc {
+    font-size: 14px;
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+}
+/* ============= Get Started Section Css ============ */
+.get__Started_section {
+    position: relative;
+    height: 750px;
+    display: flex;
+    align-items: center;
+    background: url('../images/bg__black.png');
+    background-size: cover;
+    background-position: center;
+}
+.get_started_leftSect {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+.get_started_rightSect {
+    width: 100%;
+    max-width: 480px;
+    margin: 0 0 0 auto;
+}
+.get_started_leftSect img {
+    height: 630px;
+    width: 100%;
+}
+.information__section {
+    position: relative;
+    padding: 100px 0 200px;
+    background: url('../images/request_info_bg.png');
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+}
+.smallTitle {
+    font-size: 14px;
+    color: #fff;
+}
+.info_detail_sect {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+}
+/* =========== Footer Section Css ============ */
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    z-index: 1;
+}
+.ft_section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 0;
+    border-top: 1px solid #5F6466;
+}
+.socialIcons__sect {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+.socialIcons__sect li .social_icons {
+    width: 50px;
+    height: 50px;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    color: #000;
+    transition: all 0.2s ease-in-out;
+}
+.socialIcons__sect li .social_icons:hover {
+    background: #ef0016;
+    color: #fff;
+}
+.logo img {
+    max-width: 80px;
+}
+
+/* ============ Popular Courses Css ================ */
+.popular_page_wrapper {
+    background: url('../images/contact_bg.png');
+    background-size: cover;
+    background-position: top;
+    height: 100%;
+}
+.popular_page_wrapper .info_detail_sect {
+    padding-bottom: 200px;
+}
+.popular_page_wrapper .course_section,
+.featured__workout__wrapper .feature_workout_section {
+    padding-top: 150px;
+}
+.popular_page_wrapper .course_detail_sect {
+    padding: 150px 0 0;
+}
+.course_detail_img img {
+    width: 100%;
+    max-width: 95%;
+    height: 100%;
+    max-height: 800px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 12px;
+}
+.course_detail_img {
+    position: relative;
+}
+.course_detail_img:before {
+    content: '';
+    position: absolute;
+    width: 95%;
+    height: 100%;
+    background: linear-gradient(360deg, #000000c4, transparent);
+}
+.course_detail_content .traveler__fontBold {
+    font-size: 100px;
+}
+.course_detail_content .paragraph {
+    font-size: 20px;
+    padding: 20px 0;
+}
+.course_detail_content .accordion-item {
+    background-color: transparent;
+    border: 0;
+}
+.course_detail_content .accordion-item .accordion-button:not(.collapsed) {
+    background-color: transparent;
+    border-top: 1px solid #fff;
+    border-bottom: 0;
+    outline: none;
+    border-radius: 0;
+    box-shadow: none;
+}
+.course_detail_content .accordion-item .accordion-button {
+    font-size: 30px;
+    color: #fff;
+    background-color: transparent;
+    font-family: "lancheregular", sans-serif;
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+    border-radius: 0;
+    box-shadow: 0;
+    outline: none;
+    border-radius: 0 !important;
+}
+.course_detail_content .accordion-item .accordion-button::after {
+    filter: invert(1);
+}
+.course_detail_content .accordion-item .accordion-button:not(.collapsed)::after {
+    filter: brightness(18);
+}
+/* ==============  =============== */
+.course__tabs .nav-pills .nav-link {
+    font-size: 20px;
+    color: #fff;
+    font-family: "lancheregular", sans-serif;
+    background: transparent;
+    border-radius: 0;
+    border: 0;
+    border-bottom: 1px solid transparent;
+    transition: all 0.2s ease-in-out;
+}
+.course__tabs .nav-pills .nav-link.active {
+    color: #81D4CE;
+    border-color: #81D4CE;
+}
+.payment_history_detail {
+    display: flex;
+    align-items: flex-start;
+    gap: 40px;
+    padding: 30px 0;
+    border-bottom: 1px solid #8ad5ce;
+}
+
+.payment__course__img img {
+    width: 320px;
+    height: 230px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 12px;
+}
+.payment__desc .course_video_desc {
+    margin-top: 0px;
+}
+.payment__desc .course_video_descv .course_title {
+    color: aliceblue;
+}
+.payment__desc h5 {
+    color: #81D4CE;
+}
+.payment__desc .paragraph {
+    font-size: 22px;
+    padding-top: 20px;
+}
+.card_boxes {
+    border: 1px solid #475569;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    background: #1919198a;
+}
+.card_name {
+    font-size: 14px;
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+}
+.payment_method_section {
+    width: 100%;
+    max-width: 800px;
+}
+.card_exp {
+    font-size: 14px;
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+}
+.card_action_btn {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.card_action_btn a {
+    font-size: 14px;
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+}
+.popular_page_wrapper .course_title span {
+    color: #81D4CE;
+}
+.payment_detail {
+    padding: 50px 0 100px;
+}
+.payment_listing {
+    width: 100%;
+    max-width: 500px;
+}
+.payment_listing li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid #fff;
+}
+.payment_listing li .course_title {
+    font-size: 40px;
+    color: #81D4CE;
+}
+.label {
+    font-size: 20px;
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+}
+.payment_listing li span {
+    font-size: 16px;
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+}
+.confirm_payment_detail .payment_listing {
+    max-width: 100%;
+}
+.confirm_payment_detail .btn__Section {
+    flex-direction: column;
+}
+.confirm_payment_detail .btn__Section .cta {
+    width: 100%;
+}
+.confirm_payment_detail {
+    padding-bottom: 200px;
+}
+/************* Calendar starts Here ************/
+.datepicker {
+    background: #38546359;
+    border-radius: 12px;
+    overflow: hidden;
+    width: 520px;
+    margin: 0 0 0 auto;
+}
+.ui-datepicker-header { 
+    height: 60px;
+    line-height: 50px;
+    color: #fff;
+    background: #81D4CE;
+    font-size: 22px;
+}
+.ui-datepicker-calendar thead {
+    background: transparent;
+    height: 60px;
+}
+  .ui-datepicker-prev,
+  .ui-datepicker-next {
+    width: 40px;
+    height: 40px;
+    text-indent: 9999px;
+    /* border: 2px solid #b0aead; */
+    border-radius: 100%;
+    cursor: pointer;
+    overflow: hidden;
+    margin-top: 12px;
+  }
+  .ui-datepicker-prev {
+    float: left;
+    margin-left: 12px;
+  }
+  .ui-datepicker-prev:after {
+    transform: rotate(45deg);
+    margin: -43px 0px 0px 8px;
+  }
+  .ui-datepicker-next {
+    float: right;
+    margin-right: 12px;
+  }
+  .ui-datepicker-next:after {
+    transform: rotate(-135deg);
+    margin: -43px 0px 0px 6px;
+  }
+  .ui-datepicker-prev:after,
+  .ui-datepicker-next:after {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 20px;
+    height: 20px;
+    border-left: 2px solid #b0aead;
+    border-bottom: 2px solid #b0aead;
+  }
+  .ui-datepicker-prev:hover,
+  .ui-datepicker-next:hover,
+  .ui-datepicker-prev:hover:after,
+  .ui-datepicker-next:hover:after {
+    border-color: #fff;
+  }
+  .ui-datepicker-title {
+    text-align: center;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.ui-datepicker-calendar tbody tr td {
+    width: 70px;
+    height: 70px;
+}
+.ui-datepicker-today {
+    /*background: #164391;*/
+    color: #fff;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+  .ui-datepicker-calendar {
+    width: 100%;
+    text-align: center;
+  }
+  .ui-datepicker-calendar thead tr th span {
+    display: block;
+    color: #fff;
+    font-weight: 500;
+    margin-bottom: 5px;
+    font-size: 16px;
+}
+.ui-state-default {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+    height: 70px;
+    width: 70px;
+}
+  .ui-state-default:hover {
+    background: rgba(0,0,0,0.02);
+  }
+.calendar {
+    box-shadow: 1px 0px 12px 2px rgba(0,0,0,.15);
+}
+.timepicker {
+    width: 100%;
+    outline: none;
+    border: 2px solid #81D4CE;
+    height: 65px;
+    padding: 0 10px;
+}
+.ui-state-active {
+    color: #fff;
+    background: #81D4CE;
+    border-radius: 50%;
+}
+/************* Calendar Ends Here ************/
+
+/* ======== Training Section Css ===== */
+.training_detail_section {
+    max-width: 85%;
+    margin: 0 auto;
+    text-align: center;
+}
+.training_img img {
+    width: 100%;
+    height: 100%;
+    border-radius: 30px;
+    padding: 10px 0 20px;
+}
+
+/* ============== Profile Page Css ============== */
+.profile__sect1 {
+    position: relative;
+    padding: 150px 0;
+    background: url('../images/contact_bg.png');
+    background-size: cover;
+    background-position: center;
+}
+.profile__sect1 .info_detail_sect {
+    padding-bottom: 100px;
+}
+.Profile__title_sect {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.profileTitle {
+    font-size: 20px;
+    color: #8ad5ce;
+    font-family: "lancheregular", sans-serif;
+}
+.profile_imgSect img {
+    width: 100%;
+    max-width: 300px;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+.profile_detail__listing li {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 10px 0;
+}
+.Prof_desc {
+    font-size: 24px;
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+}
+.bio {
+    font-size: 24px;
+    color: #8ad5ce;
+    padding: 20px 0 10px;
+}
+.profile_imgSect {
+    text-align: center;
+}
+.add_new_card {
+    border: 1px dashed #475569;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    background: #1919198a;
+}
+.add_newCrd {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-direction: column;
+    font-size: 14px;
+    color: #fff !important;
+    font-family: 'Poppins', sans-serif;
+}
+/* ============== Setting Page Css ============== */
+.setting_page_wrapper {
+    position: relative;
+    padding: 150px 0;
+    background: url('../images/contact_bg.png');
+    background-size: cover;
+    background-position: top;
+    height: 100%;
+}
+.setting_page_wrapper .info_detail_sect {
+    padding-bottom: 100px;
+}
+.setting__tabs_sect {
+    display: flex;
+    align-items: flex-start;
+    padding: 50px 0;
+}
+.setting__tabs_sect .nav {
+    width: 100%;
+    max-width: 280px;
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+}
+.setting__tabs_sect .tab-content {
+    width: calc(100% - 350px);
+    margin: 0 0 0 auto;
+}
+.setting__tabs_sect .nav .nav-link {
+    font-size: 16px;
+    color: #313A43;
+    border: 0;
+    outline: none;
+    border-radius: 0;
+    font-family: 'Poppins', sans-serif;
+}
+.setting__content .profileTitle {
+    font-family: 'Poppins', sans-serif;
+}
+.setting__tabs_sect .nav .nav-link.active {
+    background: #8ad5ce;
+}
+/* ================ Contact Form Css ================ */
+.contact_sec {
+    position: relative;
+    height: 100%;
+    padding-top: 150px;
+    padding-bottom: 100px;
+    background: url('../images/contact_bg.png');
+    background-size: cover;
+    background-position: top;
+}
+.contact_form_wrapper {
+    padding: 100px 150px;
+}
+.contact_form {
+    border: 1px solid #81D4CE;
+    border-radius: 20px 0px 0px 20px;
+    padding: 70px 50px;
+    background: #050708a6;
+    height: 670px;
+}
+.contact_wrapper .info_detail_sect {
+    padding-bottom: 100px;
+}
+.contact_title {
+    font-size: 30px;
+    color: #fff;
+    font-family: "lancheregular", sans-serif;
+    margin-bottom: 30px;
+}
+.inputForm {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 15px;
+    text-align: left;
+}
+.inputForm label {
+    font-size: 20px;
+    color: #fff;
+    font-style: italic;
+    font-family: 'Poppins', sans-serif;
+}
+.inputForm input {
+    height: 50px;
+    background: transparent;
+    outline: none;
+    padding: 0 8px;
+    font-size: 16px;
+    color: #fff;
+    font-style: italic;
+    border-radius: 8px;
+    font-family: 'Poppins', sans-serif;
+    /* Set linear gradient for border */
+    border-image: linear-gradient(to right, #00BBCC, #CC0018);
+    border-image-slice: 1;
+    /* Maintain border radius */
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+.inputForm textarea {
+    height: 100px;
+    background: transparent;
+    outline: none;
+    padding: 15px;
+    font-size: 16px;
+    color: #fff;
+    font-style: italic;
+    border-radius: 8px;
+    font-family: 'Poppins', sans-serif;
+    /* Set linear gradient for border */
+    border-image: linear-gradient(to right, #00BBCC, #CC0018);
+    border-image-slice: 1;
+    /* Maintain border radius */
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    resize: none;
+}
+.inputForm_check {
+    font-size: 12px;
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+    padding-top: 10px;
+    padding-bottom: 20px;
+}
+.inputForm_check .form-check-input:checked {
+    background-color: #8ad5ce;
+    border-color: #8ad5ce;
+}
+.contact_form .cta {
+    width: 100%;
+}
+.contact_detail {
+    padding: 70px 50px 50px;
+    background: linear-gradient(8deg, rgb(0 146 159 / 30%) 20%, rgba(22, 23, 23, 1) 84%);
+    height: 670px;
+}
+.map {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 30px 0;
+}
+.map img {
+    width: 100%;
+}
+.social_listing li {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 5px 0;
+    color: #fff;
+}
+.social_listing li a {
+    font-size: 18px;
+    color: #fff !important;
+    font-family: 'Poppins', sans-serif;
+}
+.bottom_socialIcon {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    gap: 20px;
+    margin-top: 20px;
+}
+.bottom_socialIcon a i{
+    font-size: 20px;
+    color: #fff;
+}
+/* =============== Schedul Css ============= */
+.schedul_time {
+    background: #38546359;
+    display: flex;
+    flex-direction: column;
+    height: 80%;
+    margin-bottom: 35px;
+    border-radius: 12px;
+}
+.schedule_headerSect {
+    background: #8ad5ce;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px 12px 0px 0px;
+}
+.schedul_time .btn-group {
+    padding: 50px 40px 0;
+}
+.schedul_time .btn-group .btn {
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+    border-color: #92d6ce;
+    color: #92d6ce;
+}
+.schedul_time .btn-group .btn-check:checked+.btn-outline-primary, 
+.btn-outline-primary.active, 
+.btn-outline-primary.dropdown-toggle.show, 
+.btn-outline-primary:active, 
+.btn-outline-primary:hover {
+    background-color: #8ad5ce !important;
+    background: #8ad5ce;
+    border-color: #8ad5ce;
+    border-radius: 0;
+    color: #fff !important;
+    box-shadow: none;
+    outline: none;
+}
+/* ========== Subscription Css Start Here ============ */
+.subscription_section {
+    position: relative;
+    padding: 150px 0 0;
+}
+.subscription_box {
+    border: 1px solid #475569;
+    padding: 20px;
+    border-radius: 12px;
+    max-width: 340px;
+    margin: 0 auto;
+}
+.pkg_title {
+    font-size: 24px;
+    color: #81D4CE;
+}
+.pkg_price {
+    font-size: 32px;
+    color: #fff;
+    padding: 10px 0;
+}
+.subscription_box .btn__Section .cta {
+    width: 100%;
+    margin-bottom: 30px;
+}
+.pkg_li li {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 16px;
+    color: #fff;
+    padding: 10px 0;
+}
+.subscription_section .traveler__fontBold {
+    font-size: 100px;
+    text-align: center;
+}
+/* ================  Modal Css  ================= */
+.Custom_modal_css  .modal-content {
+    background: #000000d9;
+    border: 2px solid #8ad5ce;
+    border-radius: 20px;
+    padding: 20px 30px;
+}
+.Custom_modal_css .modal-dialog {
+    max-width: 650px;
+}
+.Custom_modal_css .btn-close {
+    position: absolute;
+    top: 25px;
+    right: 30px;
+    border: 2px solid #8ad5ce;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background: url('../images/icon-close.png');
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: 80%;
+    background-position: center;
+    padding: 0px;
+    opacity: 1;
+    z-index: 1;
+}
+.addCard {
+    padding-top: 50px;
+}
+.addCard .course_title {
+    font-size: 50px;
+}
+.addCard .course_title span {
+    color: #8ad5ce;
+}
+.Custom_modal_css .modal-body .cta {
+    width: 100%;
+}
+/*============= Select Trainer Css ===========*/
+.select_trainer_wrapper .course_section {
+    padding-bottom: 250px;
+}
+.select_trainer_wrapper .course_section .row {
+    width: 80%;
+    margin: 0 auto;
+}
+.trainer_desc .row {
+    width: 100% !important;
+}
+.trainer_profile_section {
+    background: linear-gradient(180deg, #8ad5ce73, #8ad5ce24);
+    width: 100%;
+    max-width: 500px;
+    padding: 20px;
+    border-radius: 20px;
+}
+.trainerProfile img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    object-position: top;
+    border-radius: 20px 0;
+}
+.trainer_desc {
+    padding: 20px;
+}
+.trainer_name {
+    text-align: center;
+}
+.trainer_detail {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+    width: 120px;
+    height: 100%;
+}
+.trainer_detail .regular__text {
+    font-size: 22px;
+}
+.trainer_profile_section .cta {
+    background: transparent;
+    color: #fff;
+    width: 100%;
+}
+.trainer_profile_section .cta:hover {
+    background: #81D4CE;
+    color: #fff;
+}
