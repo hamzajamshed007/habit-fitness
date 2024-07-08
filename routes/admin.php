@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 
+
 /*
 |--------------------------------------------------------------------------
 | Admin Routes
@@ -14,7 +15,7 @@ Route::namespace ('Auth')->group(function () {
     Route::controller('LoginController')->group(function () {
         Route::get('/', 'showLoginForm')->name('login');
         Route::post('/', 'login')->name('login');
-        Route::get('logout', 'logout')->name('logout');
+        Route::post('logout', 'logout')->name('logout');
     });
 
     // Admin Password Reset
@@ -33,6 +34,13 @@ Route::middleware('admin')->group( function(){
 
     Route::controller('HomeController')->group( function(){
         Route::get('/dashboard', 'dashboard')->name('dashboard');
+    });
+
+    // AB Work
+    Route::controller('UserController')->name('users.')->prefix('users')->group( function () {
+        Route::get('/', 'index')->name('index');
+        Route::get('status/{user}', 'show')->name('show');
+        Route::post('status', 'userStatus')->name('status');
     });
 
     Route::resource('categories', 'CourseCategoryController');

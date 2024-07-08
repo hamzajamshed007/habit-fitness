@@ -1,7 +1,7 @@
 <div class="main-sidebar sidebar-style-2">
     <aside id="sidebar-wrapper">
         <div class="sidebar-brand">
-            <a href="#"> 
+            <a href="#">
                 <img alt="image" src="{{ asset('assets/images/logo.png') }}" class="header-logo mb-5" />
             </a>
         </div>
@@ -12,7 +12,7 @@
                         data-feather="monitor"></i><span>Dashboard</span></a>
             </li>
             <li>
-                <a href="#" class="nav-link"><i
+                <a href="{{ route('admin.users.index') }}" class="nav-link"><i
                     data-feather="users"></i><span> Users</span></a>
             </li>
             <li>
