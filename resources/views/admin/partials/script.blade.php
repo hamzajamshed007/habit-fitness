@@ -13,3 +13,12 @@
 <script src="{{ asset('assets/admin/js/jquery.fancybox.min.js') }}"></script>
 <!-- Custom JS File -->
 <script src="{{ asset('assets/admin/js/custom.js') }}"></script>
+
+<script>
+$.ajaxSetup({
+    headers: {
+        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+    }
+});
+
+</script>
