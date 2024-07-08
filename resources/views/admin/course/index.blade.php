@@ -18,22 +18,18 @@
                                 <table class="table table-striped" id="table-1">
                                     <thead>
                                         <tr>
-                                            <th>Image</th>
-                                            <th>Name</th>
                                             <th>Title</th>
-                                            <th>Experience</th>
+                                            <th>Category</th>
+                                            <th>Description</th>
                                             <th>Action</th>
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        @forelse($trainers as $item)
+                                        @forelse($courses as $item)
                                             <tr>
-                                                <td>
-                                                    <img alt="image" src="{{ $item->image?asset('assets/images/trainer/profile'. '/' . $item->image) : asset('assets/images/default.png') }}" class="rounded-circle" width="70" data-toggle="tooltip" title="" data-original-title="Trainer">
-                                                </td>
-                                                <td>{{ $item->name }}</td>
                                                 <td>{{ $item->title }}</td>
-                                                <td>{{ $item->experience }}</td>
+                                                <td>{{ $item->category->title }}</td>
+                                                <td>{{ \Illuminate\Support\Str::words($item->description, 50) }}</td>
                                                 <td>
                                                     <a href="{{ route('admin.trainers.detail', ['trainer' => $item->id]) }}"
                                                         class="btn btn-primary mx-1">

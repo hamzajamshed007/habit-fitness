@@ -23,8 +23,8 @@
                 <a href="#" class="menu-toggle nav-link has-dropdown"><i
                         data-feather="book"></i><span>Courses</span></a>
                 <ul class="dropdown-menu">
-                    <li><a class="nav-link" href="{{ route('admin.trainers.index') }}">All Courses</a></li>
-                    <li><a class="nav-link" href="{{ route('admin.trainers.create') }}">Add Courses</a></li>
+                    <li><a class="nav-link" href="{{ route('admin.courses.index') }}">All Courses</a></li>
+                    <li><a class="nav-link" href="{{ route('admin.courses.create') }}">Add Courses</a></li>
                 </ul>
             </li>
             <li class="dropdown">

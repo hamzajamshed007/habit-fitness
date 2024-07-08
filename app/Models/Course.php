@@ -12,4 +12,9 @@ class Course extends Model
     protected $fillable = [
         'category_id','title','description','image'
     ];
+
+    public function category()
+    {
+        return $this->hasOne(CourseCategory::class, 'id','category_id');
+    }
 }
