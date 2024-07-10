@@ -19,7 +19,7 @@ class WorkoutsController extends Controller
     public function show($id)
     {
         $pageTitle = "Workout Detail";
-        $workoutDetail = FeaturedWorkout::find($id);
+        $workoutDetail = FeaturedWorkout::findOrFail($id);
         return view('workoutsDetail', compact('pageTitle', 'workoutDetail'));
     }
 }
