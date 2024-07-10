@@ -42,6 +42,7 @@
                                 <label>Description</label>
                                 <textarea class="form-control" name="description" rows="4" required>{{ old('description') }}</textarea>
                             </div>
+                            
                             {{-- <div class="course_slots">
                                 <div class="row">
                                     <div class="col-3">
@@ -133,6 +134,13 @@
                                 </div>
                                 <button type="button" id="add_new_slot" class="btn btn-primary mt-3">Add New Slot</button>
                             </div>
+                            <div class="container mt-5">
+                                <h4>Course Accordians</h4>
+                                <div id="course_accordions">
+                                    
+                                </div>
+                                <button type="button" id="add_new_accordion" class="btn btn-primary mt-3">Add Accordion</button>
+                            </div>
                         <div class="card-footer">
                             <button class="btn btn-primary w-100" id="faq_submit">Submit</button>
                         </div>
@@ -207,8 +215,30 @@
             $('#course_slots').append(slotHtml);
         });
 
+        $('#add_new_accordion').on('click', function() {
+            var accordionHtml = `
+                <div class="accordion">
+                    <div class="form-group mb-3">
+                        <label>Title</label>
+                        <input type="text" class="form-control" name="accordion_title[]" placeholder="" required>
+                    </div>
+                    <div class="form-group mb-3">
+                        <label>Description</label>
+                        <textarea class="form-control" name="accordion_description[]" rows="4" required></textarea>
+                    </div>
+                    <button type="button" class="btn btn-danger remove_accordion mt-2">Remove</button>
+                </div>
+            `;
+            $('#course_accordions').append(accordionHtml);
+        });
+        
+
         $(document).on('click', '.remove_slot', function() {
             $(this).closest('.slot').remove();
+        });
+
+        $(document).on('click', '.remove_accordion', function() {
+            $(this).closest('.accordion').remove();
         });
     });
 

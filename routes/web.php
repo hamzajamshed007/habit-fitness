@@ -34,14 +34,19 @@ Route::namespace('Auth')->group( function(){
 
 Route::controller('HomeController')->group( function(){
     Route::get('/', 'index')->name('home');
+    Route::get('/group-classes', 'groupClasses')->name('group.classes');
 });
+Route::namespace('User')->group( function(){
+    Route::controller('WorkoutsController')->name('workouts.')->prefix('workouts')->group( function(){
+        Route::get('/', 'index')->name('index');
+        Route::get('/detail/{workout}', 'show')->name('detail');
+    });
 
-Route::controller('WorkoutsController')->name('workouts.')->prefix('workouts')->group( function(){
-    Route::get('/', 'index')->name('index');
-    Route::get('/detail/{workout}', 'show')->name('detail');
+    Route::controller('CourseController')->name('course.')->prefix('course')->group( function(){
+        Route::get('/{id}', 'courseDetail')->name('detail');
+        // Route::get('/group-classes', 'groupClasses')->name('group.classes');
+    });
 });
-
-
 
 // Route::get('/phpinfo', function() {
 //     return phpinfo();

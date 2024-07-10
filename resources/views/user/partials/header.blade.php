@@ -10,7 +10,7 @@
                         <a href="{{ route('workouts.index') }}" class="{{ Request::routeIs('workouts') ? 'active' : '' }}"> Workouts </a>
                     </li>
                     <li>
-                        <a href="group-classes.php"> Group Classes </a>
+                        <a href="{{ route('group.classes') }}"> Group Classes </a>
                     </li>
                     <li>
                         <a href="personal-training.php"> Small Group Training </a>

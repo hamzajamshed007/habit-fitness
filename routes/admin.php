@@ -61,7 +61,7 @@ Route::middleware('admin')->group( function(){
     });
 
     // AB Work Starts Here
-    Route::controller('FeaturedWorkoutsController')->name('featuredWorkouts.')->prefix('featuredWorkouts')->group( function(){
+    Route::controller('FeaturedWorkoutsController')->name('featuredWorkouts.')->prefix('featured/workouts')->group( function(){
         Route::get('/', 'index')->name('index');
         Route::get('/create', 'create')->name('create');
         Route::get('/{featuredWorkout}', 'show')->name('detail');

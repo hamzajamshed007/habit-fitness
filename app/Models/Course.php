@@ -17,4 +17,9 @@ class Course extends Model
     {
         return $this->hasOne(CourseCategory::class, 'id','category_id');
     }
+
+    public function accordions()
+    {
+        return $this->hasMany(CourseAccordion::class, 'course_id', 'id');
+    }
 }
