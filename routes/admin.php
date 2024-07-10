@@ -36,12 +36,13 @@ Route::middleware('admin')->group( function(){
         Route::get('/dashboard', 'dashboard')->name('dashboard');
     });
 
-    // AB Work
+    // AB Work Starts Here
     Route::controller('UserController')->name('users.')->prefix('users')->group( function () {
         Route::get('/', 'index')->name('index');
         Route::get('status/{user}', 'show')->name('show');
         Route::post('status', 'userStatus')->name('status');
     });
+    // AB Work Ends Here
 
     Route::resource('categories', 'CourseCategoryController');
 
@@ -58,4 +59,14 @@ Route::middleware('admin')->group( function(){
         Route::get('/{trainer}', 'show')->name('detail');
         Route::post('/store', 'store')->name('store');
     });
+
+    // AB Work Starts Here
+    Route::controller('FeaturedWorkoutsController')->name('featuredWorkouts.')->prefix('featuredWorkouts')->group( function(){
+        Route::get('/', 'index')->name('index');
+        Route::get('/create', 'create')->name('create');
+        Route::get('/{featuredWorkout}', 'show')->name('detail');
+        Route::post('/store', 'store')->name('store');
+    });
+    // AB Work Ends Here
+
 });

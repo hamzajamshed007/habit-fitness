@@ -6,17 +6,17 @@ function initializeStellarNav(index, element) {
   });
 }
 
-$(document).ready(function () {
-    var currentPageUrl = window.location.href;
-  
-    $(".header__list a").each(function () {
-        var linkUrl = $(this).attr("href");
-  
-        if (currentPageUrl.indexOf(linkUrl) !== -1) {
-            $(this).addClass("active");
-        }
-    });
-  });
+// $(document).ready(function () {
+//     var currentPageUrl = window.location.href;
+
+//     $(".header__list a").each(function () {
+//         var linkUrl = $(this).attr("href");
+
+//         if (currentPageUrl.indexOf(linkUrl) !== -1) {
+//             $(this).addClass("active");
+//         }
+//     });
+// });
 
 
 $(document).ready(function() {
@@ -53,7 +53,7 @@ $(document).ready(function() {
     setTimeout(stopTimer, 60000); // 60000 milliseconds = 1 minute
 });
 
-// 
+//
 var swiper = new Swiper(".testimonialSwiper", {
     slidesPerView: 4,
     spaceBetween: 30,
@@ -90,7 +90,7 @@ var swiper = new Swiper(".testimonialSwiper", {
         },
     },
 });
-    
+
 
 // Datepicker Calender Js
 $(function() {

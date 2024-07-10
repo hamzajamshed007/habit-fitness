@@ -9,8 +9,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
 	<meta name="csrf-token" content="{{ csrf_token() }}">
 	<!-- META TAGS-->
-	
-	<title>{{ __($pageTitle) }}</title>
+
+	<title>{{ __($pageTitle) }} | Habit Fitness</title>
 	<link rel="icon" href="{{ asset('assets/images/favicon.png') }}" />
 	<!-- BOOTSTRAP 5 -->
 	<link rel="stylesheet" href="{{ asset('assets/css/bootstrap.min.css') }}" />
@@ -26,7 +26,7 @@
 	<!-- FONT AWESOME -->
 	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
 	<!-- FONT AWESOME -->
-	
+
 	<!-- SWIPER SLIDER -->
 	<link rel="stylesheet" href="{{ asset('assets/css/swiper-bundle.min.css') }}">
 	<!-- SWIPER SLIDER -->

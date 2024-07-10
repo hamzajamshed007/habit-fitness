@@ -36,3 +36,13 @@ Route::controller('HomeController')->group( function(){
     Route::get('/', 'index')->name('home');
 });
 
+Route::controller('WorkoutsController')->name('workouts.')->prefix('workouts')->group( function(){
+    Route::get('/', 'index')->name('index');
+    Route::get('/detail/{workout}', 'show')->name('detail');
+});
+
+
+
+// Route::get('/phpinfo', function() {
+//     return phpinfo();
+// });

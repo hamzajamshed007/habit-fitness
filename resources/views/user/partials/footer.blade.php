@@ -1,7 +1,7 @@
 <footer class="footer">
     <div class="container">
         <div class="ft_section">
-            <a href="index.php" class="logo"><img src="assets/images/logo.png" alt="logo"></a>
+            <a href="index.php" class="logo"><img src="{{ asset('assets/images/logo.png') }}" alt="logo"></a>
             <p class="paragraph">© 2024 Habbit Fitness. All rights reserved.</p>
             <ul class="socialIcons__sect">
                 <li>

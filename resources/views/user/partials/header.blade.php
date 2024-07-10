@@ -4,10 +4,10 @@
             <div  id="main-nav" class="header__menu stellarnav left desktop">
                 <ul class="header__list">
                     <li>
-                        <a href="index.php"> Home </a>
+                        <a href="{{ route('home') }}" class="{{ Request::routeIs('home') ? 'active' : '' }}"> Home </a>
                     </li>
                     <li>
-                        <a href="featured-workout.php"> Workouts </a>
+                        <a href="{{ route('workouts.index') }}" class="{{ Request::routeIs('workouts') ? 'active' : '' }}"> Workouts </a>
                     </li>
                     <li>
                         <a href="group-classes.php"> Group Classes </a>
@@ -22,7 +22,7 @@
             </div>
             <div class="header__logo">
                 <a href="index.php">
-                    <img src="assets/images/logo.png" alt="logo">
+                    <img src="{{ asset('assets/images/logo.png') }}" alt="logo">
                 </a>
             </div>
             <div class="header__userSection d_flexSpacebetween">
@@ -35,7 +35,7 @@
                                 <span><i class="fa fa-user"></i></span>
                                 <p>John Smith</p>
                             </span>
-                            <img src="assets/images/arrow-down.png" class="arrow-down-icon" alt="arrow-down">
+                            <img src="{{ asset('assets/images/arrow-down.png') }}" class="arrow-down-icon" alt="arrow-down">
                         </a>
                         <div class="Userprofile_detail">
                             <ul class="header__list">
@@ -56,7 +56,7 @@
                                 </li>
                             </ul>
                         </div>
-                    </div> 
+                    </div>
                 @else
                     <a href="{{ route('register') }}" class="cta">Register</a>
                 @endif
