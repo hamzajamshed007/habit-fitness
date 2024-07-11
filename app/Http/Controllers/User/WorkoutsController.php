@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 
 use Illuminate\Http\Request;
 use App\Models\FeaturedWorkout;
+use App\Models\Testimonial;
 
 class WorkoutsController extends Controller
 {
@@ -13,13 +14,15 @@ class WorkoutsController extends Controller
     {
         $pageTitle = "Workouts";
         $workouts = FeaturedWorkout::all();
-        return view('workouts', compact('pageTitle', 'workouts'));
+        $testimonials = Testimonial::all();
+        return view('workouts', compact('pageTitle', 'workouts', 'testimonials'));
     }
 
     public function show($id)
     {
         $pageTitle = "Workout Detail";
         $workoutDetail = FeaturedWorkout::findOrFail($id);
-        return view('workoutsDetail', compact('pageTitle', 'workoutDetail'));
+        $testimonials = Testimonial::all();
+        return view('workoutsDetail', compact('pageTitle', 'workoutDetail', 'testimonials'));
     }
 }

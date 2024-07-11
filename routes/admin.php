@@ -64,8 +64,21 @@ Route::middleware('admin')->group( function(){
     Route::controller('FeaturedWorkoutsController')->name('featuredWorkouts.')->prefix('featured/workouts')->group( function(){
         Route::get('/', 'index')->name('index');
         Route::get('/create', 'create')->name('create');
-        Route::get('/{featuredWorkout}', 'show')->name('detail');
         Route::post('/store', 'store')->name('store');
+        // Route::get('/detail/{featuredWorkout}', 'show')->name('detail');
+        Route::get('/edit/{featuredWorkout}', 'edit')->name('edit');
+        Route::post('/update/{featuredWorkout}', 'update')->name('update');
+        Route::delete('/delete', 'delete')->name('delete');
+    });
+
+    Route::controller('TestimonialsController')->name('testimonials.')->prefix('testimonials')->group( function(){
+        Route::get('/', 'index')->name('index');
+        Route::get('/create', 'create')->name('create');
+        Route::post('/store', 'store')->name('store');
+        // Route::get('/detail/{testimonial}', 'show')->name('detail');
+        Route::get('/edit/{testimonial}', 'edit')->name('edit');
+        Route::post('/update/{testimonial}', 'update')->name('update');
+        Route::delete('/delete', 'delete')->name('delete');
     });
     // AB Work Ends Here
 

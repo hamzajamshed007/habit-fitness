@@ -16,7 +16,7 @@ class CreateFeaturedWorkoutsTable extends Migration
         Schema::create('featured_workouts', function (Blueprint $table) {
             $table->id();
             $table->string('title')->nullable();
-            $table->text('description');
+            $table->text('description')->nullable();
             $table->string('image')->nullable();
             $table->timestamps();
         });

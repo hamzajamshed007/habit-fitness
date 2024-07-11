@@ -36,6 +36,10 @@ class FileInfo {
             'path' => public_path().'/assets/images/featuredWorkout',
             'size' => '400x400',
         ];
+        $data['testimonialImage'] = [
+            'path' => public_path().'/assets/images/testimonial',
+            'size' => '400x400',
+        ];
         return $data;
     }
 }

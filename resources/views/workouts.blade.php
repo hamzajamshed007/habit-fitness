@@ -18,7 +18,7 @@
                                 </div>
                             </a>
                         </div>
-                     @empty
+                    @empty
                         <h1 class="title_white text-center mt-5">No Record Found</h1>
                     @endforelse
                 </div>
@@ -37,107 +37,27 @@
                 <!-- Swiper -->
                 <div class="swiper testimonialSwiper">
                     <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <div class="testimonial_box">
-                                <a href="javascript:void(0)">
-                                    <img src="{{ asset('assets/images/logo-1.png') }}" alt="logo">
-                                </a>
-                                <p class="paragraph">Non risus viverra enim, quis. Eget vitae arcu vivamus sit tellus, viverra turpis lorem. Varius a turpis urna id porttitor.</p>
-                                <div class="testimonial__user">
-                                    <span class="user__img">
-                                        <img src="{{ asset('assets/images/user-1.png') }}" alt="user image">
-                                    </span>
-                                    <span class="userDetail">
-                                        <p class="user__name">Hellena John</p>
-                                        <p class="user_desc">Co-founder</p>
-                                    </span>
+                            @forelse($testimonials as $item)
+                                <div class="swiper-slide">
+                                    <div class="testimonial_box">
+                                        <a href="javascript:void(0)">
+                                            <img src="{{ $item->testimonial_image?asset('assets/images/testimonial'. '/' . $item->testimonial_image) : asset('assets/images/testimonial_default.png') }}" alt="testimonial image">
+                                        </a>
+                                        <p class="paragraph">{{ $item->description }}</p>
+                                        <div class="testimonial__user">
+                                            <span class="user__img">
+                                                <img src="{{ $item->user_image?asset('assets/images/testimonial'. '/' . $item->user_image) : asset('assets/images/testimonial_default.png') }}" alt="user image">
+                                            </span>
+                                            <span class="userDetail">
+                                                <p class="user__name">{{ $item->name }}</p>
+                                                <p class="user_desc">{{ $item->designation }}</p>
+                                            </span>
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="testimonial_box">
-                                <a href="javascript:void(0)">
-                                    <img src="{{ asset('assets/images/logo-2.png') }}" alt="logo">
-                                </a>
-                                <p class="paragraph">Aliquet ridiculus mi porta habitant vulputate rhoncus, mattis amet enim. Sit purus venenatis velit semper lectus sed ornare quam nulla. Lacus, ut congue sagittis vel nisi integer imperdiet a vitae.</p>
-                                <div class="testimonial__user">
-                                    <span class="user__img">
-                                        <img src="{{ asset('assets/images/user-1.png') }}" alt="user image">
-                                    </span>
-                                    <span class="userDetail">
-                                        <p class="user__name">Hellena John</p>
-                                        <p class="user_desc">Co-founder</p>
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="testimonial_box">
-                                <a href="javascript:void(0)">
-                                    <img src="{{ asset('assets/images/logo-3.png') }}" alt="logo">
-                                </a>
-                                <p class="paragraph">A eget sed posuere dui risus habitasse mauris. Venenatis aliquet id ultrices a lacus. Pretium vehicula pretium posuere justo sed lorem cursus.</p>
-                                <div class="testimonial__user">
-                                    <span class="user__img">
-                                        <img src="{{ asset('assets/images/user-1.png') }}" alt="user image">
-                                    </span>
-                                    <span class="userDetail">
-                                        <p class="user__name">Hellena John</p>
-                                        <p class="user_desc">Co-founder</p>
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="testimonial_box">
-                                <a href="javascript:void(0)">
-                                    <img src="{{ asset('assets/images/logo-4.png') }}" alt="logo">
-                                </a>
-                                <p class="paragraph">Magna egestas aliquet ut integer non. Sed diam enim nibh sit. Aliquam laoreet aenean metus nibh eu scelerisque.</p>
-                                <div class="testimonial__user">
-                                    <span class="user__img">
-                                        <img src="{{ asset('assets/images/user-2.png') }}" alt="user image">
-                                    </span>
-                                    <span class="userDetail">
-                                        <p class="user__name">Hellena John</p>
-                                        <p class="user_desc">Co-founder</p>
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="testimonial_box">
-                                <a href="javascript:void(0)">
-                                    <img src="{{ asset('assets/images/logo-1.png') }}" alt="logo">
-                                </a>
-                                <p class="paragraph">Amet morbi enim sodales quis dui, in habitant pharetra. Risus id fringilla sed adipiscing volutpat sit varius turpis. Sed pretium semper rhoncus, tellus semper.</p>
-                                <div class="testimonial__user">
-                                    <span class="user__img">
-                                        <img src="{{ asset('assets/images/user-1.png') }}" alt="user image">
-                                    </span>
-                                    <span class="userDetail">
-                                        <p class="user__name">Hellena John</p>
-                                        <p class="user_desc">Co-founder</p>
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="testimonial_box">
-                                <a href="javascript:void(0)">
-                                    <img src="{{ asset('assets/images/logo-1.png') }}" alt="logo">
-                                </a>
-                                <p class="paragraph">Aliquet ridiculus mi porta habitant vulputate rhoncus, mattis amet enim. Sit purus venenatis velit semper lectus sed ornare quam nulla. Lacus, ut congue sagittis vel nisi integer imperdiet a vitae.</p>
-                                <div class="testimonial__user">
-                                    <span class="user__img">
-                                        <img src="{{ asset('assets/images/user-2.png') }}" alt="user image">
-                                    </span>
-                                    <span class="userDetail">
-                                        <p class="user__name">Hellena John</p>
-                                        <p class="user_desc">Co-founder</p>
-                                    </span>
-                                </div>
-                            </div>
+                            @empty
+                                <h1 class="title_white text-center mt-5">No Testinomial record Found</h1>
+                            @endforelse
                         </div>
                     </div>
                     <div class="swiper-button-next custom_prevNext">Next <i class="fa-solid fa-arrow-right"></i></div>

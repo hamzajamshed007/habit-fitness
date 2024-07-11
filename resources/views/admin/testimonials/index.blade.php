@@ -14,7 +14,7 @@
                 <div class="col-12">
                     <div class="card">
                         <div class="card-header">
-                            <h4>All Featured Workouts</h4>
+                            <h4>All Testimonials</h4>
                         </div>
                         <div class="card-body">
                             <div class="table-responsive">
@@ -22,37 +22,43 @@
                                     <thead>
                                         <tr>
                                             <th>#</th>
-                                            <th>Image</th>
-                                            <th>Title</th>
+                                            <th>Name</th>
+                                            <th>Designation</th>
                                             <th>Description</th>
+                                            <th>User Image</th>
+                                            <th>Testimonial Image</th>
                                             <th>Action</th>
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        @forelse($featuredWorkouts as $item)
+                                        @forelse($testimonials as $item)
                                             <tr>
                                                 <td>{{ $loop->iteration }}</td>
-                                                <td>
-                                                    <img alt="image" src="{{ $item->image?asset('assets/images/featuredWorkout'. '/' . $item->image) : asset('assets/images/default.png') }}" class="trainer-img rounded-circle" width="70" data-toggle="tooltip" title="" data-original-title="Featured Workout">
-                                                </td>
-                                                <td>{{ $item->title }}</td>
+                                                <td>{{ $item->name }}</td>
+                                                <td>{{ $item->designation }}</td>
                                                 <td>{{ \Illuminate\Support\Str::limit($item->description, 140) }}</td>
                                                 <td>
-                                                    <a href="{{ route('admin.featuredWorkouts.edit', ['featuredWorkout' => $item->id]) }}" class="btn btn-success mx-1">
+                                                    <img alt="image" src="{{ asset('assets/images/testimonial'. '/' . $item->user_image) }}" class="trainer-img rounded-circle" width="70" data-toggle="tooltip" title="" data-original-title="User Image">
+                                                </td>
+                                                <td>
+                                                    <img alt="image" src="{{ asset('assets/images/testimonial'. '/' . $item->testimonial_image) }}" class="trainer-img rounded-circle" width="70" data-toggle="tooltip" title="" data-original-title="Testimonial Image">
+                                                </td>
+                                                <td>
+                                                    <a href="{{ route('admin.testimonials.edit', ['testimonial' => $item->id]) }}" class="btn btn-success mx-1">
                                                         <i class="fas fa-edit"></i>
                                                     </a>
-                                                    {{-- <a href="{{ route('admin.featuredWorkouts.detail', ['featuredWorkout' => $item->id]) }}"
+                                                    {{-- <a href="{{ route('admin.testimonials.detail', ['testimonial' => $item->id]) }}"
                                                         class="btn btn-primary mx-1">
                                                         <i class="fas fa-eye"></i>
                                                     </a> --}}
-                                                    <button class="btn btn-danger mx-1 fw-delete" data-id="{{ $item->id }}">
+                                                    <button class="btn btn-danger mx-1 ts-delete" data-id="{{ $item->id }}">
                                                         <i class="far fa-trash-alt"></i>
                                                     </button>
                                                 </td>
                                             </tr>
                                         @empty
                                             <tr class="text-center">
-                                                <td colspan="5">No Record Found</td>
+                                                <td colspan="7">No Record Found</td>
                                             </tr>
                                         @endforelse
                                     </tbody>
@@ -76,19 +82,19 @@
     <script src="{{ asset('assets/admin/js/page/datatables.js') }}"></script>
     <script>
         // DELETE REQUEST
-        $(document).on('click', '.fw-delete', function(e) {
+        $(document).on('click', '.ts-delete', function(e) {
             var id = $(this).data('id');
 
             $.ajax({
-                url: "{{ route('admin.featuredWorkouts.delete') }}",
+                url: "{{ route('admin.testimonials.delete') }}",
                 type: 'DELETE',
                 data: { id: id },
                 success: function(data) {
                     location.reload();
-                    notify('success','Featured workout deleted successfully.');
+                    iziToast.success({ title: 'Success:', message: 'Testimonial Deleted Successfully.', position: "topRight" });
                 },
                 error: function(error) {
-                    notify('error','Oops! Something went wrong.');
+                    iziToast.error({ title: 'Error:', message: 'Some Went Wrong. Please try again later.', position: "topRight" });
                 }
             });
         });
