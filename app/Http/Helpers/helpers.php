@@ -57,7 +57,7 @@ function getFileExt($key) {
 function isTimeOk($start, $end) {
     $start  = strtotime($start);
     $end    = strtotime($end);
-    
+
     if (($start < $end) or $end == strtotime('00:00')) {
         return false;
     }

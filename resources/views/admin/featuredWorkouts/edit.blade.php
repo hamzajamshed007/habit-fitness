@@ -7,14 +7,14 @@
         <div class="row justify-content-center">
             <div class="col-12 col-md-8 col-lg-7">
                 <div class="card">
-                    <form id="faqForm" method="POST" action="{{ route('admin.featuredWorkouts.store') }}" enctype="multipart/form-data">
+                    <form id="faqForm" method="POST" action="{{ route('admin.featuredWorkouts.update', $featuredWorkout->id) }}" enctype="multipart/form-data">
                         @csrf
                         <div class="card-header">
-                            <h4>Add New Featured Workout</h4>
+                            <h4>Edit Featured Workout</h4>
                         </div>
                         <div class="card-body">
-                            <div class="trainer-image d-none">
-                                <img src="" alt="workout-img" id="workout-img-preview">
+                            <div class="trainer-image">
+                                <img src="{{ asset('assets/images/featuredWorkout'. '/' . $featuredWorkout->image) }}" alt="workout-img" id="workout-img-preview">
                             </div>
                             <div class="form-group">
                                 <label for="workout-image-upload">File</label>
@@ -22,15 +22,15 @@
                             </div>
                             <div class="form-group mb-3">
                                 <label>Title</label>
-                                <input type="text" class="form-control" name="title" placeholder="" required>
+                                <input type="text" class="form-control" name="title" value="{{ $featuredWorkout->title }}" placeholder="" required>
                             </div>
                             <div class="form-group mb-3">
                                 <label>Description</label>
-                                <textarea class="form-control" name="description" rows="4" required>{{ old('description') }}</textarea>
+                                <textarea class="form-control" name="description" rows="4" required>{{ $featuredWorkout->description }}</textarea>
                             </div>
-                            <div class="card-footer">
-                                <button class="btn btn-primary w-100" id="faq_submit">Submit</button>
-                            </div>
+                        <div class="card-footer">
+                            <button class="btn btn-primary w-100" id="faq_submit">Submit</button>
+                        </div>
                     </form>
                 </div>
             </div>

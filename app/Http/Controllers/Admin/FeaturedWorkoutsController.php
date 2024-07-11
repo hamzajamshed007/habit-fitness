@@ -43,8 +43,54 @@ class FeaturedWorkoutsController extends Controller
         return to_route('admin.featuredWorkouts.index')->withNotify($notify);
     }
 
-    public function show()
+    public function edit($id)
     {
-        return 'test';
+        $pageTitle = 'Edit Featured Workout';
+        $featuredWorkout =  FeaturedWorkout::findOrFail($id);
+        return view('admin.featuredWorkouts.edit', compact('pageTitle', 'featuredWorkout'));
+    }
+
+    public function update(Request $request, $id)
+    {
+
+        $this->validate($request, [
+            'title' => ['required', 'max:50'],
+            'description' => ['required', 'max:500'],
+            'image' => ['image', 'mimes:jpg,jpeg,png'],
+        ]);
+
+        $featuredWorkout = FeaturedWorkout::findOrFail($id);
+        $oldImage = $featuredWorkout->image;
+
+        $featuredWorkout->title = $request->title;
+        $featuredWorkout->description = $request->description;
+
+        if ($request->hasFile('image')) {
+            try {
+                $featuredWorkout->image = fileUploader($request->image, getFilePath('featuredWorkoutImage'), null, $oldImage);
+            } catch (\Exception$e) {
+                $notify[] = ['error', 'Could not upload the Image.'];
+                return back()->withNotify($notify);
+            }
+        }
+
+        $featuredWorkout->save();
+
+        $notify[] = ['success','Featured Workout updated successfully'];
+        return to_route('admin.featuredWorkouts.index')->withNotify($notify);
+    }
+
+    // public function show()
+    // {
+    //     return 'test';
+    // }
+
+    public function delete(Request $request)
+    {
+        $featuredWorkout =  FeaturedWorkout::find($request->id);
+        if (!$featuredWorkout) {
+            return response()->json(['success' => false, 'message' => 'Feature workout record not found.'], 404);
+        }
+        $featuredWorkout->delete();
     }
 }

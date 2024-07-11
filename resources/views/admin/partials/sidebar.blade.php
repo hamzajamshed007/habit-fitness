@@ -45,6 +45,14 @@
             </li>
             <li class="dropdown">
                 <a href="#" class="menu-toggle nav-link has-dropdown"><i
+                        data-feather="message-circle"></i><span>Testimonials</span></a>
+                <ul class="dropdown-menu">
+                    <li><a class="nav-link" href="{{ route('admin.testimonials.index') }}">All Testimonials</a></li>
+                    <li><a class="nav-link" href="{{ route('admin.testimonials.create') }}">Add Testimonial</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="#" class="menu-toggle nav-link has-dropdown"><i
                         data-feather="dollar-sign"></i><span>Subscriptions</span></a>
                 <ul class="dropdown-menu">
                     <li><a class="nav-link" href="#">All Subscriptions</a></li>
