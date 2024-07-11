@@ -46,6 +46,10 @@ Route::namespace('User')->group( function(){
         Route::get('/{id}', 'courseDetail')->name('detail');
         // Route::get('/group-classes', 'groupClasses')->name('group.classes');
     });
+
+    Route::controller('SubscriptionController')->name('subscription.')->prefix('subscription')->group( function(){
+        Route::get('/', 'index')->name('index');
+    });
 });
 
 // Route::get('/phpinfo', function() {
